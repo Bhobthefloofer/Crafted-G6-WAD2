@@ -27,22 +27,7 @@
       </div>
     </nav>
 
-    
-  
-
-        <main class="container mx-auto py-8">
-          <section class="flex flex-col md:flex-row justify-between items-start text-center md:text-left">
-          
-             <!-- Center Image Block -->
-            <div class="md:w-1/3 mb-4 md:mb-0">
-              <img src="../assets/dummy-image.jpg" alt="Dummy image" class="w-full h-auto mx-auto md:max-w-sm" />
-            </div>
-
-          </section>
-
-          
-      </main>
-  
+ 
       <!-- Import the Footer Component -->
       <AppFooter />
     </div>
