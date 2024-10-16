@@ -7,6 +7,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router'; // Import the router
+// import './style.css'; 
+// if this is imported then it will apply to the whole doc unless we specify 
 
 createApp(App)
   .use(router) // Use the router
