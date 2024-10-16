@@ -11,8 +11,8 @@ export default {
 </script>
 
 <style>
-/* Global styles can go here */
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 </style>
