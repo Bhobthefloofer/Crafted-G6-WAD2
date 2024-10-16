@@ -1,16 +1,11 @@
-// import { createApp } from 'vue'
-// import './style.css'
-// import App from './App.vue'
-
-// createApp(App).mount('#app')
-
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router'; // Import the router
-// import './style.css'; 
-// if this is imported then it will apply to the whole doc unless we specify 
+import './style.css'; // Import Tailwind from your CSS file
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+
 
 createApp(App)
   .use(router) // Use the router
   .mount('#app');
-

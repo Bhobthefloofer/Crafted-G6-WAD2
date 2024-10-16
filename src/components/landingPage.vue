@@ -1,22 +1,33 @@
 <template>
-    <div>
-      <!-- Navbar specific to the landing page -->
-      <header class="bg-indigo-900 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-          <h1 class="text-3xl font-bold">Crafted</h1>
-          <button class="md:hidden" @click="toggleMenu">
-            <i class="fas fa-bars"></i>
-          </button>
-          <nav :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }" class="hidden md:block">
-            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-              <li><a class="hover:underline" href="#">What is Crafted?</a></li>
-              <li><a class="hover:underline" href="#">Team</a></li>
-              <li><a class="hover:underline" href="#">Get Started</a></li>
-              <li><a class="hover:underline" href="#">Login</a></li>
-            </ul>
-          </nav>
+  <div>
+    <!-- Navbar specific to the landing page -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Crafted</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="#">WHAT IS CRAFTED</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="#">OUR TEAM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="#">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <!-- Apply the custom button class -->
+              <a class="custom-btn" href="#">GET STARTED HERE!</a>
+            </li>
+          </ul>
         </div>
-      </header>
+      </div>
+    </nav>
+
+    
   
       <!-- Landing page content -->
       <main class="container mx-auto py-8">
@@ -50,18 +61,18 @@
       </main>
   
       <!-- Import the Footer Component -->
-      <Footer />
+      <AppFooter />
     </div>
   </template>
   
   <script>
   import { ref } from 'vue';
-  import Footer from '../components/footer.vue'; // Importing Footer.vue
+  import AppFooter from './Appfooter.vue'; 
   
   export default {
     name: 'landingPage',
     components: {
-      Footer, // Register the Footer component
+      AppFooter, // Register the Footer component
     },
     setup() {
       const isMenuOpen = ref(false);
@@ -76,4 +87,40 @@
     },
   };
   </script>
+  <style scoped>
+  /* Custom styling for the "Get Started Here!" button */
+  .custom-btn {
+    background-color: #383a68;
+    color: #e6e0d6;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    margin-left: 15px; /* Space it out from other items */
+  }
+  
+  .custom-btn:hover {
+    background-color: #31337b; /* Slightly lighter shade on hover */
+    color: #ffffff;
+  }
+  
+  /* Custom styling for navbar */
+  .custom-navbar {
+    background-color: #4b4f7b;
+  }
+  
+  .custom-link {
+    color: #e6e0d6;
+    font-weight: bold;
+  }
+  
+  .custom-link:hover {
+    color: #ffffff;
+  }
+  
+  /* Global background color to avoid white */
+  body {
+    background-color: #f3f3f6;
+  }
+  </style>
   
